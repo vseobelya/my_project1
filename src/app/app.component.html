@@ -1,0 +1,51 @@
+<table width=100%>
+  <tr>
+    <td>Название товара</td>
+    <td>Стоимость</td>
+    <td>Количество</td>
+    <td>Сумма</td>
+
+  </tr>
+  <tr>
+    <td>{{goods[0]}}</td>
+    <td>{{prices[0]}}</td>
+    <td>{{amount[0]}}</td>
+    <td>{{prices[0]*amount[0]}}</td>
+    <td>
+      <table width=100%>
+        <tr>
+          <td><button type="button" (click)='amountadd(0)'>+</button></td>
+          <td><button type="button" (click)='amountsubs(0)'>-</button></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>{{goods[1]}}</td>
+    <td>{{prices[1]}}</td>
+    <td>{{amount[1]}}</td>
+    <td>{{prices[1]*amount[1]}}</td>
+    <td>
+      <table width=100%>
+        <tr>
+          <td><button type="button" (click)='amountadd(1)'>+</button></td>
+          <td><button type="button" (click)='amountsubs(1)'>-</button></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>{{goods[2]}}</td>
+    <td>{{prices[2]}}</td>
+    <td>{{amount[2]}}</td>
+    <td>{{prices[2]*amount[2]}}</td>
+    <td>
+      <table width=100%>
+        <tr>
+          <td><button type="button" (click)='amountadd(2)'>+</button></td>
+          <td><button type="button" (click)='amountsubs(2)'>-</button></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
