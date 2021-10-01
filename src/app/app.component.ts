@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'my-project';
   goods: string[] = ['Бананы', 'Яблоки', 'Апельсины'];
   prices: number[] = [89, 60, 75]; //цены на товары
-  amount: number[] = [0, 0, 0];
+  amount: number[] = [0, 0, 0]; //количество выбранных товаров
   sums: number[] = [0, 0, 0];
   count = 0;
 
