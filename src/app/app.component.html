@@ -1,51 +1,32 @@
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
 <table width=100%>
   <tr>
     <td>Название товара</td>
     <td>Стоимость</td>
     <td>Количество</td>
     <td>Сумма</td>
+  </tr>
 
+  <tr *ngFor="let item of goods; let i=index;">
+<!--    <td>{{item}}</td>-->
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.amount}}</td>
+    <td>{{item.price*item.amount}}</td>
+    <td><button type="button" (click)="amountadd(i)">+</button></td>
+    <td><button type="button" (click)="amountsubs(i)">-</button></td>
+    <td><button type="button" (click)=deletegood(item)>Удалить</button></td>
   </tr>
-  <tr>
-    <td>{{goods[0]}}</td>
-    <td>{{prices[0]}}</td>
-    <td>{{amount[0]}}</td>
-    <td>{{prices[0]*amount[0]}}</td>
-    <td>
-      <table width=100%>
-        <tr>
-          <td><button type="button" (click)='amountadd(0)'>+</button></td>
-          <td><button type="button" (click)='amountsubs(0)'>-</button></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>{{goods[1]}}</td>
-    <td>{{prices[1]}}</td>
-    <td>{{amount[1]}}</td>
-    <td>{{prices[1]*amount[1]}}</td>
-    <td>
-      <table width=100%>
-        <tr>
-          <td><button type="button" (click)='amountadd(1)'>+</button></td>
-          <td><button type="button" (click)='amountsubs(1)'>-</button></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>{{goods[2]}}</td>
-    <td>{{prices[2]}}</td>
-    <td>{{amount[2]}}</td>
-    <td>{{prices[2]*amount[2]}}</td>
-    <td>
-      <table width=100%>
-        <tr>
-          <td><button type="button" (click)='amountadd(2)'>+</button></td>
-          <td><button type="button" (click)='amountsubs(2)'>-</button></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+  <tr><br><br>
+
+<tr>
+ <td><input type="text" [(ngModel)]="newgood_name"></td>
+ <td><input type="text" [(ngModel)]="newgood_price"></td>
+ <td><button type="button" (click)="addnewgood(newgood_name, newgood_price)">Добавить новый товар</button></td>
+</tr>
+<br>
 </table>
+</body>
