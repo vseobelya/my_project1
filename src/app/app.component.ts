@@ -1,23 +1,25 @@
 import { Component } from '@angular/core';
+import {Good} from './shared/tovar';
+import {test} from './shared/data';
 
-class Good {
-  name: string;
-  price: number;
-  amount: number;
-  constructor(name: string, price: number, amount: number) {
+// class Good {
+//   name: string;
+//   price: number;
+//   amount: number;
+//   constructor(name: string, price: number, amount: number) {
+//
+//         this.name = name;
+//         this.price = price;
+//         this.amount = amount;
+//     }
+// }
 
-        this.name = name;
-        this.price = price;
-        this.amount = amount;
-    }
-}
-
-const test=[
-  {"name": "Бананы", "price": 89, "amount": 0},
-  {"name": "Яблоки", "price": 60, "amount": 0},
-  {"name": "Апельсины", "price": 75, "amount": 0}
-
-]
+// const test=[
+//   {"name": "Бананы", "price": 89, "amount": 0},
+//   {"name": "Яблоки", "price": 60, "amount": 0},
+//   {"name": "Апельсины", "price": 75, "amount": 0}
+//
+// ]
 
 @Component({
   selector: 'app-root',
