@@ -2,30 +2,7 @@
   <meta charset="UTF-8">
 </head>
 <body>
-<table width=100%>
-  <tr>
-    <td>Название товара</td>
-    <td>Стоимость</td>
-    <td>Количество</td>
-    <td>Сумма</td>
-  </tr>
-
-  <tr *ngFor="let item of goods; let i=index;">
-    <td>{{item.name}}</td>
-    <td>{{item.price}}</td>
-    <td>{{item.amount}}</td>
-    <td>{{item.price*item.amount}}</td>
-    <td><button type="button" (click)="amountadd(i)">+</button></td>
-    <td><button type="button" (click)="amountsubs(i)">-</button></td>
-    <td><button type="button" (click)=deletegood(item)>Удалить</button></td>
-  </tr>
-  <tr><br><br>
-
-<tr>
- <td><input type="text" [(ngModel)]="newgood_name"></td>
- <td><input type="text" [(ngModel)]="newgood_price"></td>
- <td><button type="button" (click)="addnewgood(newgood_name, newgood_price)">Добавить новый товар</button></td>
-</tr>
-<br>
-</table>
+  <mylist-root [test]="test"></mylist-root>
+  <app-my-form></app-my-form>
+  <br>
 </body>

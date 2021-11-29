@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgModule } from '@angular/core';
+import {test} from "../shared/data"
+import {Good} from "../shared/tovar"
 
 @Component({
   selector: 'mylist-root',
@@ -8,5 +10,11 @@ import { NgModule } from '@angular/core';
 })
 
 export class MyListComponent{
+  @Input() test:any;
 
+  deletegood(del_good: any){
+    let index = test.indexOf(del_good);
+    if(index > -1)
+        test.splice(index, 1);
+  }
 }
