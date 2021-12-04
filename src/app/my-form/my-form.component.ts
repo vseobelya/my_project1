@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component} from '@angular/core';
 import {Good} from '../shared/tovar';
 import {test} from '../shared/data';
-// import {goods} from './app.component';
 
 
 @Component({
@@ -10,9 +8,7 @@ import {test} from '../shared/data';
   templateUrl: './my-form.component.html',
   styleUrls: ['./my-form.component.css']
 })
-export class MyFormComponent implements OnInit {
-
-  @Input() goods: Good[] = test;
+export class MyFormComponent{
 
   constructor() { }
 
