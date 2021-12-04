@@ -1,3 +1,4 @@
+//добавила новый коммент, чтобы запушить
 import { Component, Input } from '@angular/core';
 import { NgModule } from '@angular/core';
 import {test} from "../shared/data"
